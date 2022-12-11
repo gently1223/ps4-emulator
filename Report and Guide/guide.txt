@@ -1,0 +1,9 @@
+You have to install below packages:
+	pip install tensorflow
+	pip install keras
+	pip install scikit-learn
+	pip install fastai
+	pip install librosa
+
+After installing above packages, run CNN.py and LSTM_CNN.py file.
+If you get error, you have to install FFmpeg to your pc.

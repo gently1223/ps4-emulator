@@ -1,0 +1,154 @@
+runfile('E:/Freelancer Project/Ongoing Project/Music Genre Classification/CNN.py', wdir='E:/Freelancer Project/Ongoing Project/Music Genre Classification')
+Reloaded modules: preprocess
+Preprocessed files exist, deserializing npy files
+Training X shape: (500, 128, 33)
+Training Y shape: (500, 10)
+Build CNN model ...
+Model: "sequential_4"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_12 (Conv2D)          (None, 128, 33, 32)       320       
+                                                                 
+ leaky_re_lu_16 (LeakyReLU)  (None, 128, 33, 32)       0         
+                                                                 
+ max_pooling2d_12 (MaxPoolin  (None, 64, 17, 32)       0         
+ g2D)                                                            
+                                                                 
+ conv2d_13 (Conv2D)          (None, 64, 17, 64)        18496     
+                                                                 
+ leaky_re_lu_17 (LeakyReLU)  (None, 64, 17, 64)        0         
+                                                                 
+ max_pooling2d_13 (MaxPoolin  (None, 32, 9, 64)        0         
+ g2D)                                                            
+                                                                 
+ conv2d_14 (Conv2D)          (None, 32, 9, 128)        73856     
+                                                                 
+ leaky_re_lu_18 (LeakyReLU)  (None, 32, 9, 128)        0         
+                                                                 
+ max_pooling2d_14 (MaxPoolin  (None, 16, 5, 128)       0         
+ g2D)                                                            
+                                                                 
+ flatten_4 (Flatten)         (None, 10240)             0         
+                                                                 
+ dense_8 (Dense)             (None, 128)               1310848   
+                                                                 
+ leaky_re_lu_19 (LeakyReLU)  (None, 128)               0         
+                                                                 
+ dense_9 (Dense)             (None, 10)                1290      
+                                                                 
+=================================================================
+Total params: 1,404,810
+Trainable params: 1,404,810
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/50
+13/13 [==============================] - 5s 314ms/step - loss: 227.4703 - accuracy: 0.0963 - val_loss: 18.2184 - val_accuracy: 0.3111
+Epoch 2/50
+13/13 [==============================] - 4s 326ms/step - loss: 9.1027 - accuracy: 0.1630 - val_loss: 3.4461 - val_accuracy: 0.0667
+Epoch 3/50
+13/13 [==============================] - 4s 284ms/step - loss: 2.8960 - accuracy: 0.2222 - val_loss: 2.5575 - val_accuracy: 0.1333
+Epoch 4/50
+13/13 [==============================] - 4s 279ms/step - loss: 1.8572 - accuracy: 0.3309 - val_loss: 1.7421 - val_accuracy: 0.3556
+Epoch 5/50
+13/13 [==============================] - 4s 278ms/step - loss: 1.5535 - accuracy: 0.4469 - val_loss: 1.8013 - val_accuracy: 0.3333
+Epoch 6/50
+13/13 [==============================] - 4s 310ms/step - loss: 1.4036 - accuracy: 0.5160 - val_loss: 1.6964 - val_accuracy: 0.3556
+Epoch 7/50
+13/13 [==============================] - 4s 285ms/step - loss: 1.3776 - accuracy: 0.4988 - val_loss: 1.8782 - val_accuracy: 0.3778
+Epoch 8/50
+13/13 [==============================] - 4s 276ms/step - loss: 1.1716 - accuracy: 0.5679 - val_loss: 1.8662 - val_accuracy: 0.3333
+Epoch 9/50
+13/13 [==============================] - 4s 298ms/step - loss: 1.1670 - accuracy: 0.5827 - val_loss: 1.6683 - val_accuracy: 0.3778
+Epoch 10/50
+13/13 [==============================] - 5s 424ms/step - loss: 0.9875 - accuracy: 0.6667 - val_loss: 1.6617 - val_accuracy: 0.4444
+Epoch 11/50
+13/13 [==============================] - 5s 349ms/step - loss: 0.9362 - accuracy: 0.6963 - val_loss: 1.8524 - val_accuracy: 0.4444
+Epoch 12/50
+13/13 [==============================] - 4s 324ms/step - loss: 0.9146 - accuracy: 0.6765 - val_loss: 1.7422 - val_accuracy: 0.2222
+Epoch 13/50
+13/13 [==============================] - 4s 345ms/step - loss: 0.7939 - accuracy: 0.7407 - val_loss: 2.2150 - val_accuracy: 0.3333
+Epoch 14/50
+13/13 [==============================] - 5s 352ms/step - loss: 0.8318 - accuracy: 0.6963 - val_loss: 1.5675 - val_accuracy: 0.4222
+Epoch 15/50
+13/13 [==============================] - 4s 295ms/step - loss: 0.6289 - accuracy: 0.7852 - val_loss: 1.6552 - val_accuracy: 0.4444
+Epoch 16/50
+13/13 [==============================] - 4s 306ms/step - loss: 0.5493 - accuracy: 0.8272 - val_loss: 1.8758 - val_accuracy: 0.4000
+Epoch 17/50
+13/13 [==============================] - 4s 323ms/step - loss: 0.5569 - accuracy: 0.7901 - val_loss: 1.9790 - val_accuracy: 0.3778
+Epoch 18/50
+13/13 [==============================] - 4s 310ms/step - loss: 0.4959 - accuracy: 0.8321 - val_loss: 2.1219 - val_accuracy: 0.4889
+Epoch 19/50
+13/13 [==============================] - 4s 282ms/step - loss: 0.4634 - accuracy: 0.8494 - val_loss: 2.1085 - val_accuracy: 0.4222
+Epoch 20/50
+13/13 [==============================] - 4s 297ms/step - loss: 0.4499 - accuracy: 0.8519 - val_loss: 2.0353 - val_accuracy: 0.4000
+Epoch 21/50
+13/13 [==============================] - 4s 311ms/step - loss: 0.3784 - accuracy: 0.8840 - val_loss: 2.1815 - val_accuracy: 0.4000
+Epoch 22/50
+13/13 [==============================] - 4s 321ms/step - loss: 0.3454 - accuracy: 0.8963 - val_loss: 2.3975 - val_accuracy: 0.4444
+Epoch 23/50
+13/13 [==============================] - 4s 290ms/step - loss: 0.2965 - accuracy: 0.9062 - val_loss: 2.7767 - val_accuracy: 0.3778
+Epoch 24/50
+13/13 [==============================] - 4s 338ms/step - loss: 0.2363 - accuracy: 0.9333 - val_loss: 2.4528 - val_accuracy: 0.4000
+Epoch 25/50
+13/13 [==============================] - 5s 375ms/step - loss: 0.2058 - accuracy: 0.9457 - val_loss: 2.5078 - val_accuracy: 0.4222
+Epoch 26/50
+13/13 [==============================] - 5s 356ms/step - loss: 0.1584 - accuracy: 0.9654 - val_loss: 2.8021 - val_accuracy: 0.4889
+Epoch 27/50
+13/13 [==============================] - 4s 295ms/step - loss: 0.1947 - accuracy: 0.9580 - val_loss: 2.4344 - val_accuracy: 0.4889
+Epoch 28/50
+13/13 [==============================] - 4s 280ms/step - loss: 0.1779 - accuracy: 0.9457 - val_loss: 3.0732 - val_accuracy: 0.3333
+Epoch 29/50
+13/13 [==============================] - 4s 307ms/step - loss: 0.1697 - accuracy: 0.9481 - val_loss: 2.4231 - val_accuracy: 0.4889
+Epoch 30/50
+13/13 [==============================] - 4s 298ms/step - loss: 0.1669 - accuracy: 0.9605 - val_loss: 2.4425 - val_accuracy: 0.5111
+Epoch 31/50
+13/13 [==============================] - 4s 282ms/step - loss: 0.1041 - accuracy: 0.9802 - val_loss: 2.4893 - val_accuracy: 0.5111
+Epoch 32/50
+13/13 [==============================] - 4s 285ms/step - loss: 0.0595 - accuracy: 0.9901 - val_loss: 2.7265 - val_accuracy: 0.4667
+Epoch 33/50
+13/13 [==============================] - 4s 299ms/step - loss: 0.0383 - accuracy: 1.0000 - val_loss: 2.6567 - val_accuracy: 0.5556
+Epoch 34/50
+13/13 [==============================] - 4s 311ms/step - loss: 0.0358 - accuracy: 0.9975 - val_loss: 3.3600 - val_accuracy: 0.4667
+Epoch 35/50
+13/13 [==============================] - 4s 284ms/step - loss: 0.0297 - accuracy: 1.0000 - val_loss: 3.1959 - val_accuracy: 0.5333
+Epoch 36/50
+13/13 [==============================] - 4s 289ms/step - loss: 0.0259 - accuracy: 0.9975 - val_loss: 3.0218 - val_accuracy: 0.4667
+Epoch 37/50
+13/13 [==============================] - 4s 296ms/step - loss: 0.0158 - accuracy: 1.0000 - val_loss: 3.3406 - val_accuracy: 0.4889
+Epoch 38/50
+13/13 [==============================] - 4s 317ms/step - loss: 0.0099 - accuracy: 1.0000 - val_loss: 2.9676 - val_accuracy: 0.5556
+Epoch 39/50
+13/13 [==============================] - 4s 306ms/step - loss: 0.0087 - accuracy: 1.0000 - val_loss: 3.5353 - val_accuracy: 0.5111
+Epoch 40/50
+13/13 [==============================] - 4s 309ms/step - loss: 0.0077 - accuracy: 1.0000 - val_loss: 3.2940 - val_accuracy: 0.5333
+Epoch 41/50
+13/13 [==============================] - 4s 336ms/step - loss: 0.0058 - accuracy: 1.0000 - val_loss: 3.3056 - val_accuracy: 0.5333
+Epoch 42/50
+13/13 [==============================] - 4s 310ms/step - loss: 0.0068 - accuracy: 1.0000 - val_loss: 3.3434 - val_accuracy: 0.5333
+Epoch 43/50
+13/13 [==============================] - 4s 299ms/step - loss: 0.0068 - accuracy: 1.0000 - val_loss: 3.4796 - val_accuracy: 0.4889
+Epoch 44/50
+13/13 [==============================] - 4s 307ms/step - loss: 0.0053 - accuracy: 1.0000 - val_loss: 3.3175 - val_accuracy: 0.5556
+Epoch 45/50
+13/13 [==============================] - 4s 297ms/step - loss: 0.0045 - accuracy: 1.0000 - val_loss: 3.3526 - val_accuracy: 0.5556
+Epoch 46/50
+13/13 [==============================] - 4s 308ms/step - loss: 0.0037 - accuracy: 1.0000 - val_loss: 3.4068 - val_accuracy: 0.5556
+Epoch 47/50
+13/13 [==============================] - 4s 283ms/step - loss: 0.0035 - accuracy: 1.0000 - val_loss: 3.3800 - val_accuracy: 0.5556
+Epoch 48/50
+13/13 [==============================] - 4s 282ms/step - loss: 0.0033 - accuracy: 1.0000 - val_loss: 3.5071 - val_accuracy: 0.5556
+Epoch 49/50
+13/13 [==============================] - 4s 282ms/step - loss: 0.0029 - accuracy: 1.0000 - val_loss: 3.3925 - val_accuracy: 0.5556
+Epoch 50/50
+13/13 [==============================] - 4s 308ms/step - loss: 0.0027 - accuracy: 1.0000 - val_loss: 3.4645 - val_accuracy: 0.5333
+dict_keys(['loss', 'accuracy', 'val_loss', 'val_accuracy'])
+
+Testing ...
+2/2 [==============================] - 0s 53ms/step - loss: 3.6563 - accuracy: 0.6055
+Test loss:   3.656323194503784
+Test accuracy: 0.6054564821545125  
+		 
+
+Saving model: ./model/model_weights_cnn.h5
+creating .json file....
